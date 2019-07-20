@@ -1,0 +1,66 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+// To style the material components
+$orange-blue-primary: mat-palette($mat-deep-orange);
+$orange-blue-accent:  mat-palette($mat-blue);
+$orange-blue-theme: mat-light-theme($orange-blue-primary, $orange-blue-accent);
+
+.orange-blue-theme {
+    @include angular-material-theme($orange-blue-theme);
+
+    // Theme colors:
+    $primary: #FF5722;
+    $accent: #448AFF;
+    $primary-dark: #E64A19;
+    $primary-light: #FFCCBC;
+    $text-dark: #212121;
+    $text-light: #FFFFFF;
+    $text-alt: #757575;
+    $red: #dc322f;
+
+    // Components of this app, and  cooresponding colors
+    .topbar-background-color { background: $primary; }
+    .topbar-text-color { color: $text-light; }
+    .sidenav-background-color { background: $text-alt; }
+    .sidenav-text-color { color: $text-light; opacity: .87; }
+    .sidenav-hover-color { color: $primary-dark; }
+    .btn-red { background-color: $red !important; color: $text-light; }
+
+    // Sets default text color 
+    .mat-drawer, .mat-drawer-container {
+        color: $text-light;
+        opacity: .87;
+    }
+
+    .mat-drawer-container {
+        background: $text-light;
+        color: $text-dark;
+    }
+
+    .contents-list a {
+        color: $text-light;
+
+        &:hover {
+            color:$primary-dark;
+        }
+    }
+
+    $base03:    #002b36;
+    $base02:    #073642;
+    $base01:    #586e75;
+    $base00:    #657b83;
+    $base0:     #839496;
+    $base1:     #93a1a1;
+    $base2:     #eee8d5;
+    $base3:     #fdf6e3;
+    $yellow:    #b58900;
+    $orange:    #cb4b16;
+    $red:       #dc322f;
+    $magenta:   #d33682;
+    $violet:    #6c71c4;
+    $blue:      #268bd2;
+    $cyan:      #2aa198;
+    $green:     #859900;
+
+}

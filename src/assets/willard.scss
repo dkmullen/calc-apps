@@ -1,0 +1,132 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$mat-primary: (
+    50 : #e1e7e8,
+    100 : #b5c3c6,
+    200 : #839ba1,
+    300 : #51727b,
+    400 : #2c545e,
+    500 : #073642,
+    600 : #06303c,
+    700 : #052933,
+    800 : #04222b,
+    900 : #02161d,
+    A100 : #5bc5ff,
+    A200 : #28b3ff,
+    A400 : #009ef4,
+    A700 : #008dda,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$mat-accent: (
+    50 : #f6f1e0,
+    100 : #e9dcb3,
+    200 : #dac480,
+    300 : #cbac4d,
+    400 : #c09b26,
+    500 : #b58900,
+    600 : #ae8100,
+    700 : #a57600,
+    800 : #9d6c00,
+    900 : #8d5900,
+    A100 : #ffe1b9,
+    A200 : #ffcb86,
+    A400 : #ffb553,
+    A700 : #ffaa3a,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// To style the material components
+$willard-primary: mat-palette($mat-primary);
+$willard-accent:  mat-palette($mat-accent);
+$willard-theme: mat-light-theme($willard-primary, $willard-accent);
+
+.willard-theme {
+    @include angular-material-theme($willard-theme);
+
+    // Theme colors:
+    $primary: #073642;
+    $accent: #b58900;
+    $primary-dark: #002b36;
+    $primary-light: #839496;
+    $text-light: #ffffff;
+    $text-dark:#002b36;
+    $text-alt: #93a1a1;
+    $red: #dc322f;
+
+    // Components of this app, and  cooresponding colors
+    .topbar-background-color { background: $primary; }
+    .topbar-text-color { color: $text-light; }
+    .sidenav-background-color { background: $primary-dark; }
+    .sidenav-text-color { color: $text-light; opacity: .87; }
+    .sidenav-hover-color { color: $red; }
+    .btn-red { background-color: $red !important; color: $text-light; }
+
+    // Sets default text color 
+    .mat-drawer, .mat-drawer-container {
+        color: $text-light;
+        opacity: .87;
+    }
+
+    .mat-drawer-container {
+        background: #eee8d5;
+        color: $text-dark;
+    }
+
+    .contents-list a {
+        color: $text-light;
+
+        &:hover {
+            color:$accent;
+        }
+    }
+
+    $base03:    #002b36;
+    $base02:    #073642;
+    $base01:    #586e75;
+    $base00:    #657b83;
+    $base0:     #839496;
+    $base1:     #93a1a1;
+    $base2:     #eee8d5;
+    $base3:     #fdf6e3;
+    $yellow:    #b58900;
+    $orange:    #cb4b16;
+    $red:       #dc322f;
+    $magenta:   #d33682;
+    $violet:    #6c71c4;
+    $blue:      #268bd2;
+    $cyan:      #2aa198;
+    $green:     #859900;
+
+}

@@ -1,0 +1,20 @@
+<div class="topbar-wrapper topbar-background-color topbar-text-color">
+  <div id="logo-area">
+    <a routerLink='' class="topbar-text-color">
+      <div id="logo-icon"><i class="material-icons">create</i></div>
+      <div id="logo-text"><h6>DKMULLEN: Tiny Apps</h6></div>
+      <div id="alt-logo-text"><h6>DKM</h6></div>
+    </a>
+    <div id="theme-icon">
+      <i class="material-icons"
+        (click)="changeTheme()"
+        matTooltip="Switch between light and dark themes"
+        >format_color_fill
+      </i>
+    </div>
+  </div>
+
+  <div id="menu-icon">
+    <i class="material-icons" (click)="sidenav.toggle()">menu</i>
+  </div>
+</div>

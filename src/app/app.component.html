@@ -1,0 +1,18 @@
+<app-topbar [sidenav]="sidenav"></app-topbar>
+<mat-sidenav-container>
+  <mat-sidenav 
+    #sidenav 
+    class="contents-sidenav sidenav-background-color"
+    mode={{sidenavMode}} 
+    [(opened)]="opened" 
+    (opened)="events.push('open')"
+    (closed)="events.push('close')">
+    <app-sidenav [sidenav]="sidenav"></app-sidenav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+    <app-button-bar></app-button-bar>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

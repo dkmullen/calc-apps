@@ -1,0 +1,115 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$mat-primary: (
+    50 : #e0e0e0,
+    100 : #b3b3b3,
+    200 : #808080,
+    300 : #4d4d4d,
+    400 : #262626,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #a6a6a6,
+    A200 : #8c8c8c,
+    A400 : #737373,
+    A700 : #666666,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$mat-accent: (
+    50 : #fff8e1,
+    100 : #ffecb5,
+    200 : #ffe083,
+    300 : #ffd451,
+    400 : #ffca2c,
+    500 : #ffc107,
+    600 : #ffbb06,
+    700 : #ffb305,
+    800 : #ffab04,
+    900 : #ff9e02,
+    A100 : #ffffff,
+    A200 : #fffaf2,
+    A400 : #ffe4bf,
+    A700 : #ffd9a6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// To style the material components
+$kurtz-primary: mat-palette($mat-primary, 500, 100, A700);
+$kurtz-accent:  mat-palette($mat-accent);
+$kurtz-theme: mat-light-theme($kurtz-primary, $kurtz-accent);
+
+.kurtz-dark-theme {
+    @include angular-material-theme($kurtz-theme);
+
+    // Theme colors:
+    $primary: #000000;
+    $accent: #ffc107;
+    $primary-dark: #000000;
+    $primary-light: #262626;
+    $text-dark: #000000;
+    $text-light: #ffffff;
+    $text-alt: #737373;
+    $main-background: #262626;
+    $red: #b00020;
+    $link: #72A3F8;
+
+    // Components of this app, and  cooresponding colors
+    .topbar-background-color { background: $primary; }
+    .topbar-text-color { color: $text-light; }
+    .sidenav-background-color { background: $primary-dark; }
+    .sidenav-text-color { color: $primary; opacity: .87; }
+    .sidenav-hover-color { color: $red; }
+    .btn-red { background-color: $red !important; color: $text-light; }
+
+    // Sets default text color 
+    .mat-drawer, .mat-drawer-container {
+        color: $text-light;
+        opacity: .87;
+    }
+
+    .mat-drawer-container {
+        background: $primary-light;
+    }
+
+    .contents-list a {
+        color: $text-light;
+
+        &:hover {
+            color:$red;
+        }
+    }
+}
